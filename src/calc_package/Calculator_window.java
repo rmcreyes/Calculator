@@ -1,3 +1,11 @@
+/**
+ * Simple Calculator
+ * Author: Roberto Martin Reyes
+ * Last Modified: December 25, 2017
+ * Description: This is code for an application exercising the use of Java programming
+ * 		and the Swing toolkit on eclipse.
+ */
+
 package calc_package;
 
 import java.awt.EventQueue;
@@ -9,7 +17,6 @@ import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JRadioButton;
-import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JLabel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -18,7 +25,6 @@ public class Calculator_window {
 
 	private JFrame frame;
 	private JTextField textField;
-	private JButton btn1;
 	
 	private double num1;
 	private String operation, degRad;
@@ -50,12 +56,14 @@ public class Calculator_window {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		// app frame
 		frame = new JFrame();
 		frame.getContentPane().setForeground(Color.BLACK);
 		frame.setBounds(100, 100, 317, 480);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
+		// text field
 		textField = new JTextField();
 		textField.setBounds(67, 37, 213, 41);
 		frame.getContentPane().add(textField);
