@@ -7,7 +7,7 @@ A simple calculator application making use of Swing's development tools. Makes u
   
 [![https://gyazo.com/8fa19c49f4138a6e4e7f886b8c7955b4](https://i.gyazo.com/8fa19c49f4138a6e4e7f886b8c7955b4.gif)](https://gyazo.com/8fa19c49f4138a6e4e7f886b8c7955b4)  
   
-Future improvements:  
+### Areas for improvements:  
 * remove the trailing zeroes when not needed  
   
 You can run this program but cloning or downloading this repository and running `calculator.jar` found in the root directory.
