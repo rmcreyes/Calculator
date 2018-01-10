@@ -23,6 +23,12 @@ import java.awt.event.ActionEvent;
 
 public class Calculator_window {
 
+	/*
+	 * I removed the trailing zeroes when not needed, and the modified parts begin from line 263.
+	 * I did the modification for the button =, ¡Ì, log, sin, cos and tan. Hope it will help u. Good luck.
+	 * Modifier: Zeno Van (by the way, u can also call me Zeqiu Fan)
+	 */
+	
 	private JFrame frame;
 	private JTextField textField;
 	
@@ -254,8 +260,15 @@ public class Calculator_window {
 				else {
 					result = 0;
 				}
+// altered by Zeno*****************************************************************
+// to remove the trailing zeroes when not needed
+				if (result == (int)result)
+					textField.setText("" + (int)result);
+				else
+					textField.setText("" + result);
 				
-				textField.setText(String.format("%g", result));
+//				textField.setText(String.format("%g", result));
+// ********************************************************************************
 			}
 		});
 		btnEq.setFont(new Font("Agency FB", Font.PLAIN, 22));
@@ -355,8 +368,15 @@ public class Calculator_window {
 			public void actionPerformed(ActionEvent e) {
 				double value = Double.parseDouble(textField.getText());
 				if(value >= 0) {
-					double sqrt = Math.sqrt(value);
-					textField.setText(String.valueOf(sqrt));
+					double sqrt = Math.sqrt(value);	
+// ********************************************************************************
+					if (sqrt == (int)sqrt)
+						textField.setText("" + (int)sqrt);
+					else
+						textField.setText("" + sqrt);
+					
+//					textField.setText(String.valueOf(sqrt));
+// ********************************************************************************
 				}
 			}
 		});
@@ -371,7 +391,13 @@ public class Calculator_window {
 				double value = Double.parseDouble(textField.getText());
 				if(value > 0) {
 					double log = Math.log10(value);
-					textField.setText(String.valueOf(log));
+// ********************************************************************************
+					if (log == (int)log)
+						textField.setText("" + (int)log);
+					else
+						textField.setText("" + log);
+//					textField.setText(String.valueOf(log));
+// ********************************************************************************
 				}
 			}
 		});
@@ -388,7 +414,13 @@ public class Calculator_window {
 					value *= Math.PI / 180.0;
 				}
 				double sin = Math.sin(value);
-				textField.setText(String.valueOf(sin));
+// ********************************************************************************
+				if (sin == (int)sin)
+					textField.setText("" + (int)sin);
+				else
+					textField.setText("" + sin);
+//				textField.setText(String.valueOf(sin));
+//********************************************************************************
 			}
 		});
 		btnSin.setFont(new Font("Agency FB", Font.PLAIN, 20));
@@ -404,7 +436,13 @@ public class Calculator_window {
 					value *= Math.PI / 180.0;
 				}
 				double cos = Math.cos(value);
-				textField.setText(String.valueOf(cos));
+// ********************************************************************************
+				if (cos == (int)cos)
+					textField.setText("" + (int)cos);
+				else
+					textField.setText("" + cos);
+//				textField.setText(String.valueOf(cos));
+//********************************************************************************
 			}
 		});
 		btnCos.setFont(new Font("Agency FB", Font.PLAIN, 20));
@@ -420,7 +458,13 @@ public class Calculator_window {
 					value *= Math.PI / 180.0;
 				}
 				double tan = Math.tan(value);
-				textField.setText(String.valueOf(tan));
+// ********************************************************************************
+				if (tan == (int)tan)
+					textField.setText("" + (int)tan);
+				else
+					textField.setText("" + tan);
+//				textField.setText(String.valueOf(tan));
+//********************************************************************************
 			}
 		});
 		btnTan.setFont(new Font("Agency FB", Font.PLAIN, 20));
